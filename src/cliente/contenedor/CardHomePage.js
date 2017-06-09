@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import Link from 'next/link'
 
 const CardHomePage = () => (
   <Card>
@@ -12,7 +13,7 @@ const CardHomePage = () => (
     />
     <CardActions>
       <FlatButton label="SignUp" />
-      <FlatButton label="SignIn" />
+      <Link href="/login"><a><FlatButton label="SignIn" /></a></Link>
     </CardActions>
     <CardText expandable={true}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
