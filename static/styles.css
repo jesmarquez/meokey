@@ -7,3 +7,9 @@
 .field-line {
   padding: 16px;
 }
+
+.container-search {
+  margin: 50px auto;
+
+  text-align: center;
+}
