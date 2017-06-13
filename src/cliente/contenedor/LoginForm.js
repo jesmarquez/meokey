@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, CardHeader } from 'material-ui/Card'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
+import Link from 'next/link'
 
 const LoginForm = () => (
   <div className="container">
@@ -30,11 +31,15 @@ const LoginForm = () => (
           </div>
           <br />
           <div className="field-line">
-            <RaisedButton
-              type="submit"
-              label="Login!"
-              primary
-            />
+            <Link href="/visor">
+            <a>
+              <RaisedButton
+                type="submit"
+                label="Login!"
+                primary
+              />
+            </a>
+            </Link>
           </div>
         </form>
       </div>
