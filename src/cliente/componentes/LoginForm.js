@@ -4,7 +4,7 @@ import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import Link from 'next/link'
 
-const LoginForm = () => (
+const LoginForm = ({onSubmit}) => (
   <div className="container">
     <Card>
       <div className="container">
@@ -14,7 +14,7 @@ const LoginForm = () => (
             avatar="static/users.png"
             actAsExpander={true}
         />
-        <form>
+        <form onSubmit={onSubmit}>
           <div className="field-line">
             <TextField 
               floatingLabelText="username"
@@ -31,15 +31,11 @@ const LoginForm = () => (
           </div>
           <br />
           <div className="field-line">
-            <Link href="/visor">
-            <a>
-              <RaisedButton
-                type="submit"
-                label="Login!"
-                primary
-              />
-            </a>
-            </Link>
+            <RaisedButton
+              type="submit"
+              label="Login!"
+              primary
+            />
           </div>
         </form>
       </div>

@@ -12,20 +12,23 @@ class App extends React.Component {
     this.state = {
       logged: false,
     }
+
+    this.processLogin = this.processLogin.bind(this);
   }
 
   processLogin(event){
+    // prevent default action. in this case, action is the form submission event
+    event.preventDefault()
+
     this.setState({ logged: true })
+    console.log('login sucess!')
   }
 
   render() {
     return (
-      <Layout 
-        logged={this.state.logged}
-        onSubmit={this.processLogin}
-      >
+      <Layout logged={this.state.logged}>
         {this.props.showHome && <Home />}
-        {this.props.showLogin && <LoginForm />}
+        {this.props.showLogin && <LoginForm onSubmit={this.processLogin}/>}
         {this.props.showVisor && <SearchBox />}
         {this.props.showVisor && <Lista />}
       </Layout>

@@ -39,17 +39,13 @@ class AppBarMain extends React.Component {
     super(props)
   }
 
-  handleChange = (event, logged) => {
-    this.props.setState({logged: logged});
-  };
-
   render() {
     return (
       <div>
         <AppBar
           title="Meokey"
           iconElementLeft={<IconButton><NavigationClose /></IconButton>}
-          iconElementRight={this.logged ? <Logged /> : <Login />}
+          iconElementRight={this.props.logged ? <Logged /> : <Login />}
         />
       </div>
     );

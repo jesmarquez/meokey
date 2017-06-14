@@ -9,7 +9,7 @@ const Layout = (props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link href="/static/styles.css" rel="stylesheet" />
     </Head>
-    <AppBarMain logged={props.logged} onSubmit={props.onSubmit}/>
+    <AppBarMain logged={props.logged}/>
     {props.children}
   </div>  
 )
