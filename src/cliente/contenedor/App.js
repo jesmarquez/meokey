@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../componentes/Layout'
-import Home from '../componentes/Home'
 
 class App extends React.Component {
   constructor(props) {
@@ -11,10 +10,14 @@ class App extends React.Component {
     }
   }
 
+  processLogin(event){
+    this.setState({ logged: true })
+  }
+
   render() {
     return (
       <Layout logged={this.state.logged}>
-        <Home />
+        {this.props.children}
       </Layout>
     )
   }
