@@ -1,7 +1,7 @@
-import Layout from '../src/cliente/contenedor/Layout'
+import Layout from '../src/cliente/componentes/Layout'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import Lista from '../src/cliente/contenedor/Lista'
-import SearchBox from '../src/cliente/contenedor/SearchBox'
+import Lista from '../src/cliente/componentes/Lista'
+import SearchBox from '../src/cliente/componentes/SearchBox'
 
 const Visor = () => (
   <MuiThemeProvider>

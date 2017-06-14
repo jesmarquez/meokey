@@ -3,7 +3,7 @@ import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import Link from 'next/link'
 
-const CardHomePage = () => (
+const CardHome = () => (
   <Card>
     <CardHeader
       title="Gestión de claves"
@@ -24,4 +24,4 @@ const CardHomePage = () => (
   </Card>
 );
 
-export default CardHomePage
+export default CardHome
