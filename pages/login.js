@@ -1,3 +1,4 @@
+import '../src/cliente/componentes/tap_events'
 import Layout from '../src/cliente/componentes/Layout'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import LoginForm from '../src/cliente/componentes/LoginForm'

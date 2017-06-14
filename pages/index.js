@@ -1,18 +1,11 @@
-import injectTapEventPlugin from 'react-tap-event-plugin'
+import '../src/cliente/componentes/tap_events'
 import React from 'react'
-import Layout from '../src/cliente/componentes/Layout'
-import Home from '../src/cliente/componentes/Home'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-
-injectTapEventPlugin()
+import App from '../src/cliente/contenedor/App'
 
 const Index = () => (
   <MuiThemeProvider>
-    <div>
-      <Layout>
-        <Home />
-      </Layout>
-    </div>
+    <App />
   </MuiThemeProvider>
 )
 

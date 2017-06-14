@@ -1,3 +1,4 @@
+import React from 'react'
 import CardHome from './CardHome'
 
 const containerStyle = {

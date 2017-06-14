@@ -1,3 +1,4 @@
+import React from 'react'
 import AppBarMain from './AppBarMain'
 import Head from 'next/head'
 
