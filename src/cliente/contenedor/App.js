@@ -11,7 +11,7 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      logged: false,
+      logged: this.props.logged,
     }
 
     this.processLogin = this.processLogin.bind(this);
@@ -23,7 +23,12 @@ class App extends React.Component {
 
     this.setState({ logged: true })
     console.log('login sucess!')
-    Router.push('/visor')
+    const url = {
+      pathname: '/visor',
+      query: {logged: true}
+    }
+
+    Router.push(url)
   }
 
   render() {
