@@ -4,6 +4,7 @@ import Home from '../componentes/Home'
 import LoginForm from '../componentes/LoginForm'
 import Lista from '../componentes/Lista'
 import SearchBox from '../componentes/SearchBox'
+import Router from 'next/router'
 
 class App extends React.Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class App extends React.Component {
 
     this.setState({ logged: true })
     console.log('login sucess!')
+    Router.push('/visor')
   }
 
   render() {
