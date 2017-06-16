@@ -6,6 +6,22 @@ import MenuItem from 'material-ui/MenuItem'
 import FlatButton from 'material-ui/FlatButton'
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
 import NavigationClose from 'material-ui/svg-icons/navigation/close'
+import Router from 'next/router'
+
+function touchAppBarRight(e) {
+  console.log('e')
+}
+
+function touchItemTap(event, value) {
+  if (value === 3) {
+    const url = {
+      pathname: '/',
+      query: {logged: false}
+    }
+    Router.push(url)
+  }
+  console.log(value)
+}
 
 class Login extends React.Component {
   static muiName = 'FlatButton';
@@ -25,10 +41,11 @@ const Logged = (props) => (
     }
     targetOrigin={{horizontal: 'right', vertical: 'top'}}
     anchorOrigin={{horizontal: 'right', vertical: 'top'}}
+    onChange={touchItemTap}
   >
-    <MenuItem primaryText="Refresh" />
-    <MenuItem primaryText="Help" />
-    <MenuItem primaryText="Sign out" />
+    <MenuItem value={1} primaryText="Refrescar" />
+    <MenuItem value={2} primaryText="Ayuda" />
+    <MenuItem value={3} primaryText="Sign out!" />
   </IconMenu>
 )
 
@@ -46,6 +63,7 @@ class AppBarMain extends React.Component {
           title="Meokey"
           iconElementLeft={<IconButton><NavigationClose /></IconButton>}
           iconElementRight={this.props.logged ? <Logged /> : <Login />}
+          onRightIconButtonTouchTap={touchAppBarRight}
         />
       </div>
     );
